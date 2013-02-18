@@ -16,6 +16,7 @@ using Cirrious.MvvmCross.Views;
 namespace Cirrious.MvvmCross.Droid.Views
 {
     public abstract partial class MvxTabActivityView<TViewModel> : TabActivity
+        where TViewModel : class, IMvxViewModel
     {
         private readonly List<int> _ownedSubViewModelIndicies = new List<int>();
 

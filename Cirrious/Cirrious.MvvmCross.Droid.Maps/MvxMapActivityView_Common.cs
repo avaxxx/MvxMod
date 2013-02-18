@@ -18,7 +18,7 @@ using Cirrious.MvvmCross.Platform.Diagnostics;
 
 namespace Cirrious.MvvmCross.Droid.Maps
 {
-    public abstract class MvxMapActivityView<TViewModel>
+    public abstract partial class MvxMapActivityView<TViewModel>
         : IMvxAndroidView<TViewModel>
             , IMvxServiceConsumer
             where TViewModel : class, IMvxViewModel

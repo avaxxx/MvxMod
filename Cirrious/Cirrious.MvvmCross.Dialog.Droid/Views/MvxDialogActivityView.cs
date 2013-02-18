@@ -6,10 +6,12 @@
 // Project Lead - Stuart Lodge, @slodge, me@slodge.com
 
 using CrossUI.Droid.Dialog;
+using Cirrious.MvvmCross.Interfaces.ViewModels;
 
 namespace Cirrious.MvvmCross.Dialog.Droid.Views
 {
     public abstract partial class MvxDialogActivityView<TViewModel> : DialogActivity
+        where TViewModel : class, IMvxViewModel
     {
         protected MvxDialogActivityView()
         {
