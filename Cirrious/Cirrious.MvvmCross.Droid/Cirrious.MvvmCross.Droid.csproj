@@ -91,6 +91,7 @@
     </Compile>
     <Compile Include="Interfaces\IMvxAndroidFragmentView.cs" />
     <Compile Include="Views\MvxFragmentDataStore.cs" />
+    <Compile Include="Views\MvxFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cirrious.MvvmCross\Cirrious.MvvmCross.csproj">
