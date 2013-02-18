@@ -95,6 +95,7 @@
       <DependentUpon>MvxBindingTabActivityView.cs</DependentUpon>
     </Compile>
     <Compile Include="Converters\MvxStringValueConverter.cs" />
+    <Compile Include="Views\MvxBoundFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cirrious.MvvmCross.Binding\Cirrious.MvvmCross.Binding.csproj">
