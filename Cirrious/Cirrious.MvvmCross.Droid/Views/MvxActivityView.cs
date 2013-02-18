@@ -5,12 +5,12 @@
 // 
 // Project Lead - Stuart Lodge, @slodge, me@slodge.com
 
-using Android.App;
+using Android.Support.V4.App;
 using Cirrious.MvvmCross.Interfaces.ViewModels;
 
 namespace Cirrious.MvvmCross.Droid.Views
 {
-    public abstract partial class MvxActivityView<TViewModel> : Activity
+    public abstract partial class MvxActivityView<TViewModel> : FragmentActivity
         where TViewModel : class, IMvxViewModel
     {
         protected MvxActivityView()
