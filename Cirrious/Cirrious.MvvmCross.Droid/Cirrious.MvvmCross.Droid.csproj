@@ -89,6 +89,7 @@
       <SubType>Code</SubType>
       <DependentUpon>MvxTabActivityView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IMvxAndroidFragmentView.cs" />
     <Compile Include="Views\MvxFragmentDataStore.cs" />
   </ItemGroup>
   <ItemGroup>

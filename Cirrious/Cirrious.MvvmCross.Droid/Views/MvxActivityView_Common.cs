@@ -25,6 +25,7 @@ namespace Cirrious.MvvmCross.Droid.Views
     {
         // Code shared across all activities, copy paste as you will.
 
+        private readonly MvxFragmentDataStore _fragmentDataStore = new MvxFragmentDataStore ();
         private TViewModel _viewModel;
 
         public Type ViewModelType
@@ -33,6 +34,10 @@ namespace Cirrious.MvvmCross.Droid.Views
         }
 
         public bool IsVisible { get; private set; }
+        
+        public MvxFragmentDataStore FragmentDataStore {
+            get { return _fragmentDataStore; }
+        }
 
         public TViewModel ViewModel
         {
