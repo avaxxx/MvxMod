@@ -44,6 +44,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
+    <Reference Include="Mono.Android.Support.v4" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExtensionMethods\MvxDateTimeExtensionMethods.cs" />
@@ -88,6 +89,11 @@
       <SubType>Code</SubType>
       <DependentUpon>MvxTabActivityView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IMvxAndroidFragmentView.cs" />
+    <Compile Include="Interfaces\IMvxFragmentDataStore.cs" />
+    <Compile Include="Platform\Fragments\MvxFragment.cs" />
+    <Compile Include="Platform\Fragments\MvxFragmentDataEventArgs.cs" />
+    <Compile Include="Platform\Fragments\MvxFragmentDataStore.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cirrious.MvvmCross\Cirrious.MvvmCross.csproj">
@@ -103,4 +109,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Folder Include="Platform\Fragments\" />
+  </ItemGroup>
 </Project>

@@ -41,6 +41,7 @@ namespace Cirrious.MvvmCross.Droid.ExtensionMethods
             where TViewModel : class, IMvxViewModel
         {
             androidView.OnLifetimeEvent((listener, activity) => listener.OnDestroy(activity));
+            androidView.FragmentDataStore.ClearAll ();
             var view = androidView as IMvxView<TViewModel>;
             view.OnViewDestroy();
         }

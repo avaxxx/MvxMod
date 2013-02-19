@@ -14,6 +14,7 @@ namespace Cirrious.MvvmCross.Droid.Interfaces
 {
     public interface IMvxAndroidView
         : IMvxBaseAndroidView
+          , IMvxAndroidFragmentView
     {
         void MvxInternalStartActivityForResult(Intent intent, int requestCode);
     }

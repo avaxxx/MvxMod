@@ -10,6 +10,7 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Cirrious.MvvmCross.Droid.ExtensionMethods;
+using Cirrious.MvvmCross.Droid.Platform.Fragments;
 using Cirrious.MvvmCross.Droid.Interfaces;
 using Cirrious.MvvmCross.ExtensionMethods;
 using Cirrious.MvvmCross.Interfaces.ServiceProvider;
@@ -27,6 +28,7 @@ namespace Cirrious.MvvmCross.Droid.Views
 
         // Code shared across all activities, copy paste as you will.
 
+        private readonly IMvxFragmentDataStore _fragmentDataStore = new MvxFragmentDataStore ();
         private TViewModel _viewModel;
 
         public Type ViewModelType
@@ -35,6 +37,10 @@ namespace Cirrious.MvvmCross.Droid.Views
         }
 
         public bool IsVisible { get; private set; }
+        
+        public IMvxFragmentDataStore FragmentDataStore {
+            get { return _fragmentDataStore; }
+        }
 
         public TViewModel ViewModel
         {

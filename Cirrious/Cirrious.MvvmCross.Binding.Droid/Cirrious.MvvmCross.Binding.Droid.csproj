@@ -44,6 +44,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
+    <Reference Include="Mono.Android.Support.v4" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\Binders\IMvxViewTypeResolver.cs" />
@@ -94,6 +95,7 @@
       <DependentUpon>MvxBindingTabActivityView.cs</DependentUpon>
     </Compile>
     <Compile Include="Converters\MvxStringValueConverter.cs" />
+    <Compile Include="Views\MvxBoundFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cirrious.MvvmCross.Binding\Cirrious.MvvmCross.Binding.csproj">
