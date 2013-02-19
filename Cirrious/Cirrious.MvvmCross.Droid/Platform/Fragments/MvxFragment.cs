@@ -44,7 +44,7 @@ namespace Cirrious.MvvmCross.Droid.Platform.Fragments
             base.OnDetach ();
         }
 
-        private void HandleValueChanged (object sender, MvxFragmentDataStore.ValueChangedEventArgs e)
+        private void HandleValueChanged (object sender, MvxFragmentDataEventArgs e)
         {
             if (_androidView == null || !e.Check (Id, Tag))
                 return;

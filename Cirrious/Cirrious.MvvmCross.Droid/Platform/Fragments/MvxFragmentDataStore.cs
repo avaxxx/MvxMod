@@ -80,37 +80,11 @@ namespace Cirrious.MvvmCross.Droid.Platform.Fragments
         protected void OnValueChanged (int id, string tag, object value)
         {
             if (ValueChanged != null)
-                ValueChanged (this, new ValueChangedEventArgs (id, tag, value));
+                ValueChanged (this, new MvxFragmentDataEventArgs (id, tag, value));
         }
 
-        public event EventHandler<ValueChangedEventArgs> ValueChanged;
+        public event EventHandler<MvxFragmentDataEventArgs> ValueChanged;
 
-        public class ValueChangedEventArgs : System.EventArgs
-        {
-            public readonly int Id;
-            public readonly string Tag;
-            public readonly object Value;
-            
-            public ValueChangedEventArgs (int id, string tag, object value)
-            {
-                Id = id;
-                Tag = tag;
-                Value = value;
-            }
-
-            public bool Check(int id, string tag) {
-                if (id != Id)
-                    return false;
-
-                if (tag == Tag)
-                    return true;
-                if (tag != null && tag.Equals (Tag))
-                    return true;
-
-                return false;
-            }
-        }
-        
         private struct Key : IEquatable<Key>
         {
             private readonly int _id;
