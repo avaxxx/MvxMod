@@ -90,8 +90,8 @@
       <DependentUpon>MvxTabActivityView.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IMvxAndroidFragmentView.cs" />
-    <Compile Include="Views\MvxFragmentDataStore.cs" />
-    <Compile Include="Views\MvxFragment.cs" />
+    <Compile Include="Platform\Fragments\MvxFragment.cs" />
+    <Compile Include="Platform\Fragments\MvxFragmentDataStore.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cirrious.MvvmCross\Cirrious.MvvmCross.csproj">
@@ -107,4 +107,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Folder Include="Platform\Fragments\" />
+  </ItemGroup>
 </Project>

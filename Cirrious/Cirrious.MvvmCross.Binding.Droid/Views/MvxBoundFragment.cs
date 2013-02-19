@@ -5,6 +5,7 @@ using Android.Views;
 using Cirrious.MvvmCross.Binding.Droid.ExtensionMethods;
 using Cirrious.MvvmCross.Binding.Droid.Interfaces.Binders;
 using Cirrious.MvvmCross.Binding.Droid.Interfaces.Views;
+using Cirrious.MvvmCross.Droid.Platform.Fragments;
 using Cirrious.MvvmCross.Droid.Views;
 
 namespace Cirrious.MvvmCross.Binding.Droid.Views

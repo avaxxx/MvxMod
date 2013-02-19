@@ -10,6 +10,7 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Cirrious.MvvmCross.Droid.ExtensionMethods;
+using Cirrious.MvvmCross.Droid.Platform.Fragments;
 using Cirrious.MvvmCross.Droid.Interfaces;
 using Cirrious.MvvmCross.ExtensionMethods;
 using Cirrious.MvvmCross.Interfaces.ServiceProvider;

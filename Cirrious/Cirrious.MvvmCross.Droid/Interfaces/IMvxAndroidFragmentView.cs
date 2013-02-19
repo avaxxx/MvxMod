@@ -1,4 +1,4 @@
-using Cirrious.MvvmCross.Droid.Views;
+using Cirrious.MvvmCross.Droid.Platform.Fragments;
 
 namespace Cirrious.MvvmCross.Droid.Interfaces
 {

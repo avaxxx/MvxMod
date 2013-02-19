@@ -3,7 +3,7 @@ using Android.Support.V4.App;
 using Cirrious.MvvmCross.Interfaces.ViewModels;
 using Cirrious.MvvmCross.Droid.Interfaces;
 
-namespace Cirrious.MvvmCross.Droid.Views
+namespace Cirrious.MvvmCross.Droid.Platform.Fragments
 {
     public abstract class MvxFragment<TData>
         : Fragment
