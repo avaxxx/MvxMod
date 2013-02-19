@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Cirrious.MvvmCross.Droid.Interfaces;
 
 namespace Cirrious.MvvmCross.Droid.Platform.Fragments
 {
@@ -7,7 +8,7 @@ namespace Cirrious.MvvmCross.Droid.Platform.Fragments
     /// Fragment data vault is used to store data for Fragments, which they then retrieve when they want
     /// and also monitor when the data changes.
     /// </summary>
-    public sealed class MvxFragmentDataStore
+    public sealed class MvxFragmentDataStore : IMvxFragmentDataStore
     {
         private readonly Dictionary<Key, object> _values = new Dictionary<Key, object>();
 

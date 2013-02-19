@@ -90,6 +90,7 @@
       <DependentUpon>MvxTabActivityView.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IMvxAndroidFragmentView.cs" />
+    <Compile Include="Interfaces\IMvxFragmentDataStore.cs" />
     <Compile Include="Platform\Fragments\MvxFragment.cs" />
     <Compile Include="Platform\Fragments\MvxFragmentDataEventArgs.cs" />
     <Compile Include="Platform\Fragments\MvxFragmentDataStore.cs" />
