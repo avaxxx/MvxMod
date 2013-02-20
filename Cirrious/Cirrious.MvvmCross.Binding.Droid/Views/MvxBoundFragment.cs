@@ -31,10 +31,8 @@ namespace Cirrious.MvvmCross.Binding.Droid.Views
         /// layout resource.
         /// </summary>
         /// <param name="layoutId">Layout resource id to use for this fragment.</param>
-        public MvxBoundFragment(int layoutId) : this() {
-            var args = new Bundle ();
-            args.PutInt (LayoutIdArgument, layoutId);
-            Arguments = args;
+        public MvxBoundFragment(int dataId, int layoutId) : base(dataId) {
+            Arguments.PutInt (LayoutIdArgument, layoutId);
         }
 
         protected IMvxViewBindingManager BindingManager {

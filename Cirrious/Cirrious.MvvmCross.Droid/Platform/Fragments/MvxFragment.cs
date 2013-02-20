@@ -1,4 +1,5 @@
 using System;
+using Android.OS;
 using Android.Support.V4.App;
 using Cirrious.MvvmCross.Interfaces.ViewModels;
 using Cirrious.MvvmCross.Droid.Interfaces;
@@ -9,8 +10,28 @@ namespace Cirrious.MvvmCross.Droid.Platform.Fragments
         : Fragment
         where TData : class
     {
+        private const string DataIdArgument = "mvxDataId";
+
         private IMvxAndroidFragmentView _androidView;
         private TData _data;
+
+        public MvxFragment() : base() {
+        }
+
+        public MvxFragment (int dataId) : this() {
+            var args = new Bundle ();
+            args.PutInt (DataIdArgument, dataId);
+            Arguments = args;
+        }
+
+        private int DataId {
+            get {
+                if (Arguments != null) {
+                    return Arguments.GetInt(DataIdArgument, Id);
+                }
+                return Id;
+            }
+        }
 
         public TData Data {
             get { return _data; }
@@ -30,7 +51,7 @@ namespace Cirrious.MvvmCross.Droid.Platform.Fragments
             if (_androidView != null) {
                 var ds = _androidView.FragmentDataStore;
                 ds.ValueChanged += HandleValueChanged;
-                Data = ds.GetValue<TData> (Id, Tag);
+                Data = ds.GetValue<TData> (DataId);
             }
         }
 
@@ -46,7 +67,7 @@ namespace Cirrious.MvvmCross.Droid.Platform.Fragments
 
         private void HandleValueChanged (object sender, MvxFragmentDataEventArgs e)
         {
-            if (_androidView == null || !e.Check (Id, Tag))
+            if (_androidView == null || e.Id != DataId)
                 return;
 
             Data = e.Value as TData;
