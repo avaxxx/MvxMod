@@ -41,8 +41,9 @@ namespace Cirrious.MvvmCross.Binding.Droid.Views
 
         protected int LayoutId {
             get {
-                if (Arguments != null && Arguments.ContainsKey(LayoutIdArgument))
-                    return Arguments.GetInt(LayoutIdArgument);
+                if (Arguments != null) {
+                    return Arguments.GetInt(LayoutIdArgument, 0);
+                }
                 return 0;
             }
         }
