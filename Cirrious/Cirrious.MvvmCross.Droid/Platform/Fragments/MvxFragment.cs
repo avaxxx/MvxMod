@@ -6,6 +6,9 @@ using Cirrious.MvvmCross.Droid.Interfaces;
 
 namespace Cirrious.MvvmCross.Droid.Platform.Fragments
 {
+    /// <summary>
+    /// Base class for fragments which use <see cref="IMvxFragmentDataStore"/> to look up data to operate with.
+    /// </summary>
     public abstract class MvxFragment<TData>
         : Fragment
         where TData : class
@@ -15,15 +18,30 @@ namespace Cirrious.MvvmCross.Droid.Platform.Fragments
         private IMvxAndroidFragmentView _androidView;
         private TData _data;
 
+        /// <summary>
+        /// Initializes the class to use the fragment <see cref="Id"/> as the data Id when looking up
+        /// data from <see cref="IMvxFragmentDataStore"/>.
+        /// This constructor is also used by Android framework to restore the fragments.
+        /// </summary>
         public MvxFragment() : base() {
         }
 
+        /// <summary>
+        /// Initializes the class with <paramref name="dataId"/> for looking up data for the fragment.
+        /// </summary>
+        /// <param name="dataId">
+        /// Data Id for the fragment, used to look up data from <see cref="IMvxFragmentDataStore"/>.
+        /// </param>
         public MvxFragment (int dataId) : this() {
             var args = new Bundle ();
             args.PutInt (DataIdArgument, dataId);
             Arguments = args;
         }
 
+        /// <summary>
+        /// Data Id for the fragment used to look up the data from <see cref="IMvxFragmentDataStore"/>.
+        /// </summary>
+        /// <value>The data Id for the fragment. If the data Id is not set it returns the fragment Id.</value>
         private int DataId {
             get {
                 if (Arguments != null) {

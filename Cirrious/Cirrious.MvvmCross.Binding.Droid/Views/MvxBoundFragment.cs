@@ -20,7 +20,7 @@ namespace Cirrious.MvvmCross.Binding.Droid.Views
         private IMvxViewBindingManager _bindingManager;
 
         /// <summary>
-        /// Constructor for the Android framework to restore the fragment.
+        /// Internal constructor for the Android framework to restore the fragment.
         /// </summary>
         public MvxBoundFragment () : base()
         {
