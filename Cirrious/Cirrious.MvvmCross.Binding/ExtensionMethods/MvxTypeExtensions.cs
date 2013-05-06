@@ -15,7 +15,7 @@ namespace Cirrious.MvvmCross.Binding.ExtensionMethods
         public static object MakeSafeValue(this Type propertyType, object value)
         {
             var safeValue = value;
-            if (!propertyType.IsInstanceOfType(value))
+            if (!propertyType.IsInstanceOfType(value) && !propertyType.IsValueType && value != null)
             {
                 if (propertyType.IsValueType && propertyType.IsGenericType)
                 {
